@@ -118,8 +118,8 @@
   // Is pjax supported by this browser?
   $.support.pjax =
   window.history && window.history.pushState && window.history.replaceState
-  // pushState isn't reliable on iOS yet.
-  && !navigator.userAgent.match(/(iPod|iPhone|iPad|WebApps\/.+CFNetwork)/);
+  // pushState isn't reliable on iOS until 5.
+  && !navigator.userAgent.match(/((iPod|iPhone|iPad).+\bOS\s+[1-4]|WebApps\/.+CFNetwork)/)
 
   // When called on a link, fetches the href with ajax into the
   // container specified as the first parameter or with the data-pjax
